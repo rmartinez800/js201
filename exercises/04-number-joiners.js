@@ -5,12 +5,30 @@
 // numberJoinerWhile(1, 10) --> '1_2_3_4_5_6_7_8_9_10'
 // numberJoinerWhile(12, 14) --> '12_13_14'
 
-
+function numberJoinerWhile (startNum, endNum) {
+    var i = startNum
+    var theString = ''
+    while (i <= endNum) {
+        theString  = theString + i + '_'
+        i = i + 1
+    }
+    var len = theString.length
+    theString = theString.substring(0, len - 1)
+    return theString
+}
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "numberJoinerFor" which does the same thing as "numberJoinerWhile",
 // except using a "for" loop internally.
-
+function numberJoinerFor (startNum, endNum) {
+var theString = ''
+for (var i = startNum; i <= endNum; i++) {
+    theString = theString + i + "_"
+}
+var len = theString.length
+theString = theString.substring(0, len - 1)
+return theString 
+}
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -21,3 +39,21 @@
 // numberJoinerFancy(1, 10) --> '1_2_3_4_5_6_7_8_9_10'
 // numberJoinerFancy(1, 5, '~') --> 1~2~3~4~5
 // numberJoinerFancy(3, 6, '***BANANAS***') --> 1***BANANAS***2***BANANAS***3
+function numberJoinerFancy (startNum, endNum, sep1) {
+var theString = ''
+if (sep1 === ) {
+    return 
+}
+else if(sep1 === ){
+    return 
+}
+else { sep1 
+    
+}
+for (var i = startNum; i <= endNum; i++) {
+    theString = theString + i + sep1
+}
+var len = theString.length
+theString = theString.substring(0, len - 1)
+return theString  
+}

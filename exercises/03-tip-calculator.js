@@ -9,9 +9,17 @@
 // Examples:
 // tipAmount(100, 'good') --> 20
 // tipAmount(40, 'fair') --> 6
-
-
-
+function tipAmount(billAmount, serviceLvl) {
+  if(serviceLvl === 'good') {
+    return billAmount * 0.2
+  }
+  else if(serviceLvl === 'fair') {
+    return billAmount * 0.15
+  }
+  else if(serviceLvl === 'bad'){
+    return billAmount * 0.1
+  }
+  }
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "totalAmount" that takes the same arguments as "tipAmount"
 // except it returns the total as the tip amount plus the bill amount.
@@ -20,6 +28,10 @@
 // Examples:
 // totalAmount(100, 'good') --> 120
 // totalAmount(40, 'fair') --> 46
+function totalAmount (billAmount, serviceLvl) {
+  return (billAmount + tipAmount(billAmount, serviceLvl))
+}
+
 
 
 
@@ -31,3 +43,6 @@
 // Examples:
 // splitAmount(100, 'good', 5) --> 24
 // splitAmount(40, 'fair', 2) --> 23
+function splitAmount (billAmount,serviceLvl, peopleSplt) {
+  return totalAmount(billAmount, serviceLvl) / peopleSplt
+}
