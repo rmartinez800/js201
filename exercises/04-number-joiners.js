@@ -40,20 +40,13 @@ return theString
 // numberJoinerFancy(1, 5, '~') --> 1~2~3~4~5
 // numberJoinerFancy(3, 6, '***BANANAS***') --> 1***BANANAS***2***BANANAS***3
 function numberJoinerFancy (startNum, endNum, sep1) {
-var theString = ''
-if (sep1 === ) {
-    return 
-}
-else if(sep1 === ){
-    return 
-}
-else { sep1 
+    var theString = ''
+    var sep1 = sep1 || "_"
+    for (var i = startNum; i <= endNum; i++) {
+        theString = theString + i + sep1
+    }
+    var len = theString.length
+    theString = theString.substring(0, len - 1)
+    return theString 
+    }
     
-}
-for (var i = startNum; i <= endNum; i++) {
-    theString = theString + i + sep1
-}
-var len = theString.length
-theString = theString.substring(0, len - 1)
-return theString  
-}

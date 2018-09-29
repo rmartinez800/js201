@@ -7,8 +7,10 @@
 // *****
 // *****
 // *****
-
-
+function makeSquare (size) {
+    return size * size
+}
+console.log ("*")
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "makeBox" which is given a width and height and returns a
